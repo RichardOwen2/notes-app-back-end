@@ -2,3 +2,5 @@ node_modules
 package-lock.json
 admin.csv
 notes-api-webserver.pem
+.env
+.prod.env
