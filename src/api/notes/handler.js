@@ -9,7 +9,7 @@ class NotesHandler {
   }
 
   async postNoteHandler(request, h) {
-    this._validator(request.payload);
+    this._validator.validateNotePayload(request.payload);
     const { title = 'untitled', body, tags } = request.payload;
 
     const noteId = await this._service.addNote({ title, body, tags });
@@ -48,7 +48,7 @@ class NotesHandler {
   }
 
   async putNoteByIdHandler(request, h) {
-    this._validator(request.payload);
+    this._validator.validateNotePayload(request.payload);
     const { id } = request.params;
 
     await this._service.editNoteById(id, request.payload);

@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const Hapi = require('@hapi/hapi');
-const ClientError = require('./error/ClientError');
+const ClientError = require('./exceptions/ClientError');
 
 // notes
 const notes = require('./api/notes');
