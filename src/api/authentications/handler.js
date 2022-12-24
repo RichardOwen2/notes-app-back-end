@@ -47,7 +47,7 @@ class AuthenticationsHandler {
       data: {
         accessToken,
       },
-    }
+    };
   }
 
   async deleteAuthenticationHandler(request) {
